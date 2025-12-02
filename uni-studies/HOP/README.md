@@ -1,7 +1,5 @@
 # HOP
 
 Subdirectories:
-- `Monte_Carlo` — Monte Carlo related code/notes
-- `task6` — Task 6 materials
-
-Add files into the appropriate subfolders.
+- `Monte_Carlo` — Assignment 1 
+- `task6` — Assignment 2
