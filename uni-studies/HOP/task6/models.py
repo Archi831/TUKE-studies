@@ -8,7 +8,7 @@ class Task:
         self.prerequisites = prerequisites
         self.parallel = parallel
 
-        self.start_time = None
+        self.start_time : int | None = None
         self.assigned_device = None
     
 class Device:
@@ -37,7 +37,7 @@ class Device:
         self.usage_log.append((start_time, start_time + duration, task_is_parallel))
         self.usage_log.sort(key=lambda x: x)
 
-def load_data(self, filename):
+def load_data(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
 
@@ -47,7 +47,7 @@ def load_data(self, filename):
         task = Task(
             name=t['name'],
             duration=t['duration'],
-            devices=[device_list[i] for i in t['devices']],
+            devices=[i for i in t['devices']],
             prerequisites=t['prerequisites'],
             parallel=t['parallel']
         )

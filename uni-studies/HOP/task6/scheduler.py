@@ -1,6 +1,6 @@
 from models import Task, Device, load_data
 
-def build_schedule(tasks, devices, task_order_indices):
+def build_schedule(tasks:list[Task], devices:list[Device], task_order_indices:list[int]) -> int:
     for d in devices:
         d.usage_log = [] # for fresh start
     
@@ -15,12 +15,12 @@ def build_schedule(tasks, devices, task_order_indices):
             prereq_task = task_map[prereq_name]
 
             if prereq_task.start_time is None:
-                return float('inf') 
+                return 2**31 - 1 
             min_start_time = max(min_start_time, prereq_task.start_time + prereq_task.duration) 
     
         # --- Find Earliest Device Slot ---
         best_device: Device | None = None
-        earliest_start = float('inf')
+        earliest_start = 2**31 - 1
         
         for dev_name in task.devices:
             device = next(d for d in devices if d.name == dev_name)
