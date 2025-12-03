@@ -39,7 +39,7 @@ def build_schedule(tasks:list[Task], devices:list[Device], task_order_indices:li
                 else:
                     current_test_time += 1
         
-         # --- Step C: Assign Task ---
+         # --- Assign Task ---
         if best_device:
             task.start_time = earliest_start
             task.assigned_device = best_device.name
