@@ -3,14 +3,14 @@ import random
 from models import Task, Device, load_data
 from scheduler import build_schedule
 
-def create_neighbor(current_order):
+def create_neighbor(current_order: list[int]) -> list[int]:
     """Generate a neighboring solution by swapping two tasks."""
     neighbor_order = list(current_order)
     i, j = random.sample(range(len(current_order)), 2)
     neighbor_order[i], neighbor_order[j] = neighbor_order[j], neighbor_order[i]
     return neighbor_order
 
-def should_accept(delta, temperature):
+def should_accept(delta: int, temperature: float) -> bool:
     """Decide whether to accept the new solution."""
     if delta < 0:
         return True
@@ -19,7 +19,7 @@ def should_accept(delta, temperature):
         return random.uniform(0, 1) < acceptance_prob
     return False
 
-def simulated_annealing(tasks, devices, initial_temp=1000, cooling_rate=0.999, max_iterations=10_000):
+def simulated_annealing(tasks:list[Task], devices:list[Device], initial_temp=1000, cooling_rate=0.999, max_iterations=10_000) -> tuple[list[int], int]:
     """
     Simulated Annealing algorithm to optimize task scheduling.
     """
