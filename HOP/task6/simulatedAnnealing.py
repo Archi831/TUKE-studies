@@ -1,7 +1,7 @@
 import math 
 import random
 from models import Task, Device, load_data
-from scheduler import build_schedule
+from scheduler import build_schedule, generate_random_topological_sort
 
 def create_neighbor(current_order: list[int]) -> list[int]:
     """Generate a neighboring solution by swapping two tasks."""
@@ -24,9 +24,18 @@ def simulated_annealing(tasks:list[Task], devices:list[Device], initial_temp=100
     Simulated Annealing algorithm to optimize task scheduling.
     """
 
-    current_order = list(range(len(tasks)))
-    random.shuffle(current_order)
-    current_makespan = build_schedule(tasks, devices, current_order)
+    best_start_order = list(range(len(tasks)))
+    best_start_makespan = float('inf')
+    
+    for _ in range(100):
+        order = generate_random_topological_sort(tasks)
+        makespan = build_schedule(tasks, devices, order)
+        if makespan < best_start_makespan:
+            best_start_makespan = makespan
+            best_start_order = order
+
+    current_order = best_start_order
+    current_makespan = best_start_makespan
 
     best_order = list(current_order)
     best_makespan = current_makespan
@@ -56,7 +65,7 @@ def simulated_annealing(tasks:list[Task], devices:list[Device], initial_temp=100
     return best_order, best_makespan
 
 if __name__ == "__main__":
-    tasks, device_names = load_data("HOP\\task6\\a2v6.json")
+    tasks, device_names = load_data("HOP\\task6\\large_dataset.json")
     devices = [Device(name) for name in device_names]
 
     best_order, best_makespan = simulated_annealing(tasks, devices)
