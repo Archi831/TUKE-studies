@@ -1,4 +1,43 @@
+import random
 from models import Task, Device, load_data
+
+def generate_random_topological_sort(tasks: list[Task]) -> list[int]:
+    """Generates a valid random topological sort of tasks."""
+    n = len(tasks)
+    in_degree = [0] * n
+    adj = [[] for _ in range(n)]
+    
+    # Map names to indices
+    name_to_idx = {t.name: i for i, t in enumerate(tasks)}
+    
+    # Build graph
+    for i, task in enumerate(tasks):
+        for prereq in task.prerequisites:
+            if prereq in name_to_idx:
+                u = name_to_idx[prereq]
+                adj[u].append(i)
+                in_degree[i] += 1
+                
+    # Kahn's Algorithm with random selection
+    queue = [i for i in range(n) if in_degree[i] == 0]
+    topo_order = []
+    
+    while queue:
+        # Randomly pick next available task to ensure diversity
+        idx = random.choice(range(len(queue)))
+        u = queue.pop(idx)
+        topo_order.append(u)
+        
+        for v in adj[u]:
+            in_degree[v] -= 1
+            if in_degree[v] == 0:
+                queue.append(v)
+                
+    if len(topo_order) != n:
+        # Cycle detected or error, fallback to range
+        return list(range(n))
+        
+    return topo_order
 
 def build_schedule(tasks:list[Task], devices:list[Device], task_order_indices:list[int]) -> float:
     for d in devices:
