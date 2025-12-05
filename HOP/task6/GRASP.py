@@ -5,7 +5,7 @@ from scheduler import build_schedule
 Greedy Randomized Adaptive Search Procedure
 Chapter 2.8 of "Clever Algorithms"
 """
-def get_available_tasks(tasks, scheduled_names):
+def get_available_tasks(tasks : list[Task], scheduled_names: set[str]) -> list[int]:
     """Identify tasks whose prerequisites are met."""
     candidates = []
     for i, task in enumerate(tasks):
@@ -15,7 +15,7 @@ def get_available_tasks(tasks, scheduled_names):
             candidates.append(i)
     return candidates
 
-def grasp_construction(tasks, alpha=0.3):
+def grasp_construction(tasks: list[Task], alpha=0.3) -> list[int]:
     """
     Builds a task execution order using Restricted Candidate List (RCL).
     """
@@ -35,10 +35,10 @@ def grasp_construction(tasks, alpha=0.3):
         
         # Build RCL
         # Threshold: allow tasks within alpha% of the best score
-        threshold = max_score - alpha * (max_score - min_score)
+        threshold = min_score + alpha * (max_score - min_score) # lower is better
         
         rcl = [i for i, score in zip(candidate_indices, scores) 
-               if score >= threshold]
+               if score <= threshold]
         
         # Select Randomly from RCL
         selected_idx = random.choice(rcl)
@@ -48,7 +48,7 @@ def grasp_construction(tasks, alpha=0.3):
         
     return task_order_indices
 
-def local_search(tasks, devices, current_order, current_makespan):
+def local_search(tasks: list[Task], devices: list[Device], current_order: list[int], current_makespan: float) -> tuple[list[int], float]:
     """
     Tries to improve the schedule by swapping adjacent tasks in the priority list.
     """
@@ -65,11 +65,11 @@ def local_search(tasks, devices, current_order, current_makespan):
             
     return improved_order, improved_makespan
 
-def run_grasp(tasks, devices, max_iterations=100, alpha=0.2):
+def run_grasp(tasks: list[Task], devices: list[Device], max_iterations=100, alpha=0.2) -> tuple[list[int], float]:
     """
     Main GRASP optimization loop.
     """
-    best_order = None
+    best_order = list(range(len(tasks)))
     best_makespan = float('inf')
     
     print(f"Starting GRASP with {max_iterations} iterations...")
