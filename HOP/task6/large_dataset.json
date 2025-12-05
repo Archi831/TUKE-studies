@@ -1,0 +1,1056 @@
+{
+  "devices": [
+    "Device_0",
+    "Device_1",
+    "Device_2",
+    "Device_3",
+    "Device_4",
+    "Device_5",
+    "Device_6",
+    "Device_7",
+    "Device_8",
+    "Device_9"
+  ],
+  "tasks": [
+    {
+      "name": "Task_0",
+      "duration": 59,
+      "devices": [
+        "Device_4",
+        "Device_5"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_1",
+      "duration": 20,
+      "devices": [
+        "Device_3",
+        "Device_5",
+        "Device_4"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_2",
+      "duration": 28,
+      "devices": [
+        "Device_1",
+        "Device_2"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_3",
+      "duration": 100,
+      "devices": [
+        "Device_4",
+        "Device_7",
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_4",
+      "duration": 70,
+      "devices": [
+        "Device_6",
+        "Device_3",
+        "Device_9"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_5",
+      "duration": 54,
+      "devices": [
+        "Device_5",
+        "Device_3",
+        "Device_6"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_6",
+      "duration": 16,
+      "devices": [
+        "Device_1",
+        "Device_9"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_7",
+      "duration": 24,
+      "devices": [
+        "Device_0",
+        "Device_4"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_8",
+      "duration": 90,
+      "devices": [
+        "Device_9"
+      ],
+      "prerequisites": [
+        "Task_6",
+        "Task_2",
+        "Task_0"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Task_9",
+      "duration": 16,
+      "devices": [
+        "Device_1",
+        "Device_2"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_10",
+      "duration": 67,
+      "devices": [
+        "Device_9",
+        "Device_3",
+        "Device_8"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_11",
+      "duration": 52,
+      "devices": [
+        "Device_2",
+        "Device_9"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_12",
+      "duration": 53,
+      "devices": [
+        "Device_5",
+        "Device_4",
+        "Device_6"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_13",
+      "duration": 48,
+      "devices": [
+        "Device_7",
+        "Device_2",
+        "Device_8"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_14",
+      "duration": 85,
+      "devices": [
+        "Device_7"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_15",
+      "duration": 23,
+      "devices": [
+        "Device_8",
+        "Device_3"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_16",
+      "duration": 76,
+      "devices": [
+        "Device_2",
+        "Device_4"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_17",
+      "duration": 56,
+      "devices": [
+        "Device_3",
+        "Device_6",
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_18",
+      "duration": 22,
+      "devices": [
+        "Device_3"
+      ],
+      "prerequisites": [
+        "Task_4"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Task_19",
+      "duration": 90,
+      "devices": [
+        "Device_7",
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_20",
+      "duration": 79,
+      "devices": [
+        "Device_3",
+        "Device_6"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_21",
+      "duration": 49,
+      "devices": [
+        "Device_0",
+        "Device_5",
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_22",
+      "duration": 58,
+      "devices": [
+        "Device_0",
+        "Device_7"
+      ],
+      "prerequisites": [
+        "Task_0",
+        "Task_4"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Task_23",
+      "duration": 68,
+      "devices": [
+        "Device_8",
+        "Device_2",
+        "Device_1"
+      ],
+      "prerequisites": [
+        "Task_9",
+        "Task_18"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Task_24",
+      "duration": 20,
+      "devices": [
+        "Device_4"
+      ],
+      "prerequisites": [
+        "Task_23",
+        "Task_17"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "Task_25",
+      "duration": 56,
+      "devices": [
+        "Device_4",
+        "Device_3"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_26",
+      "duration": 69,
+      "devices": [
+        "Device_5",
+        "Device_6",
+        "Device_2"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_27",
+      "duration": 46,
+      "devices": [
+        "Device_0",
+        "Device_6"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_28",
+      "duration": 40,
+      "devices": [
+        "Device_8",
+        "Device_5"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_29",
+      "duration": 28,
+      "devices": [
+        "Device_8",
+        "Device_3"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_30",
+      "duration": 10,
+      "devices": [
+        "Device_5"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_31",
+      "duration": 16,
+      "devices": [
+        "Device_6",
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_32",
+      "duration": 38,
+      "devices": [
+        "Device_8",
+        "Device_4"
+      ],
+      "prerequisites": [
+        "Task_25",
+        "Task_29"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "Task_33",
+      "duration": 19,
+      "devices": [
+        "Device_8",
+        "Device_2",
+        "Device_7"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_34",
+      "duration": 68,
+      "devices": [
+        "Device_3",
+        "Device_9"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_35",
+      "duration": 63,
+      "devices": [
+        "Device_9"
+      ],
+      "prerequisites": [
+        "Task_16",
+        "Task_32"
+      ],
+      "parallel": true
+    },
+    {
+      "name": "Task_36",
+      "duration": 22,
+      "devices": [
+        "Device_0",
+        "Device_3"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_37",
+      "duration": 67,
+      "devices": [
+        "Device_3",
+        "Device_8",
+        "Device_6"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_38",
+      "duration": 55,
+      "devices": [
+        "Device_7",
+        "Device_2"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_39",
+      "duration": 93,
+      "devices": [
+        "Device_6",
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_40",
+      "duration": 76,
+      "devices": [
+        "Device_9"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_41",
+      "duration": 95,
+      "devices": [
+        "Device_3",
+        "Device_2"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_42",
+      "duration": 65,
+      "devices": [
+        "Device_3"
+      ],
+      "prerequisites": [
+        "Task_29",
+        "Task_41",
+        "Task_20"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Task_43",
+      "duration": 62,
+      "devices": [
+        "Device_7",
+        "Device_5"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_44",
+      "duration": 61,
+      "devices": [
+        "Device_8",
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Task_45",
+      "duration": 95,
+      "devices": [
+        "Device_4",
+        "Device_6",
+        "Device_3"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_46",
+      "duration": 30,
+      "devices": [
+        "Device_0",
+        "Device_7"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_47",
+      "duration": 98,
+      "devices": [
+        "Device_7",
+        "Device_8"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_48",
+      "duration": 55,
+      "devices": [
+        "Device_7"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Task_49",
+      "duration": 13,
+      "devices": [
+        "Device_8",
+        "Device_3"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_0",
+      "duration": 49,
+      "devices": [
+        "Device_1",
+        "Device_5"
+      ],
+      "prerequisites": [
+        "Task_15"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_1",
+      "duration": 37,
+      "devices": [
+        "Device_0",
+        "Device_3"
+      ],
+      "prerequisites": [
+        "Chain_Task_0"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_2",
+      "duration": 39,
+      "devices": [
+        "Device_0",
+        "Device_1"
+      ],
+      "prerequisites": [
+        "Chain_Task_1"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_3",
+      "duration": 21,
+      "devices": [
+        "Device_5",
+        "Device_4"
+      ],
+      "prerequisites": [
+        "Chain_Task_2"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_4",
+      "duration": 27,
+      "devices": [
+        "Device_3",
+        "Device_7"
+      ],
+      "prerequisites": [
+        "Chain_Task_3"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_5",
+      "duration": 21,
+      "devices": [
+        "Device_4",
+        "Device_5"
+      ],
+      "prerequisites": [
+        "Chain_Task_4"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_6",
+      "duration": 32,
+      "devices": [
+        "Device_7",
+        "Device_4"
+      ],
+      "prerequisites": [
+        "Chain_Task_5"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_7",
+      "duration": 41,
+      "devices": [
+        "Device_5",
+        "Device_3"
+      ],
+      "prerequisites": [
+        "Chain_Task_6"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_8",
+      "duration": 22,
+      "devices": [
+        "Device_4",
+        "Device_0"
+      ],
+      "prerequisites": [
+        "Chain_Task_7"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_9",
+      "duration": 36,
+      "devices": [
+        "Device_9",
+        "Device_3"
+      ],
+      "prerequisites": [
+        "Chain_Task_8"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_10",
+      "duration": 31,
+      "devices": [
+        "Device_0",
+        "Device_8"
+      ],
+      "prerequisites": [
+        "Chain_Task_9"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_11",
+      "duration": 44,
+      "devices": [
+        "Device_5",
+        "Device_8"
+      ],
+      "prerequisites": [
+        "Chain_Task_10"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_12",
+      "duration": 26,
+      "devices": [
+        "Device_7",
+        "Device_2"
+      ],
+      "prerequisites": [
+        "Chain_Task_11"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_13",
+      "duration": 43,
+      "devices": [
+        "Device_7",
+        "Device_5"
+      ],
+      "prerequisites": [
+        "Chain_Task_12"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_14",
+      "duration": 22,
+      "devices": [
+        "Device_5",
+        "Device_3"
+      ],
+      "prerequisites": [
+        "Chain_Task_13"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_15",
+      "duration": 31,
+      "devices": [
+        "Device_1",
+        "Device_8"
+      ],
+      "prerequisites": [
+        "Chain_Task_14"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_16",
+      "duration": 43,
+      "devices": [
+        "Device_7",
+        "Device_8"
+      ],
+      "prerequisites": [
+        "Chain_Task_15"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_17",
+      "duration": 20,
+      "devices": [
+        "Device_0",
+        "Device_9"
+      ],
+      "prerequisites": [
+        "Chain_Task_16"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_18",
+      "duration": 32,
+      "devices": [
+        "Device_7",
+        "Device_0"
+      ],
+      "prerequisites": [
+        "Chain_Task_17"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Chain_Task_19",
+      "duration": 50,
+      "devices": [
+        "Device_5",
+        "Device_0"
+      ],
+      "prerequisites": [
+        "Chain_Task_18"
+      ],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_0",
+      "duration": 60,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_1",
+      "duration": 60,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_2",
+      "duration": 31,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_3",
+      "duration": 47,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_4",
+      "duration": 33,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_5",
+      "duration": 36,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_6",
+      "duration": 39,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_7",
+      "duration": 35,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_8",
+      "duration": 42,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_9",
+      "duration": 54,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_10",
+      "duration": 43,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_11",
+      "duration": 40,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_12",
+      "duration": 31,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_13",
+      "duration": 56,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Bottleneck_Task_14",
+      "duration": 52,
+      "devices": [
+        "Device_0"
+      ],
+      "prerequisites": [],
+      "parallel": false
+    },
+    {
+      "name": "Parallel_Task_0",
+      "duration": 5,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_1",
+      "duration": 11,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_2",
+      "duration": 9,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_3",
+      "duration": 5,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_4",
+      "duration": 7,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_5",
+      "duration": 9,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_6",
+      "duration": 7,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_7",
+      "duration": 6,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_8",
+      "duration": 15,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_9",
+      "duration": 6,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_10",
+      "duration": 10,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_11",
+      "duration": 6,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_12",
+      "duration": 13,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_13",
+      "duration": 6,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    },
+    {
+      "name": "Parallel_Task_14",
+      "duration": 13,
+      "devices": [
+        "Device_1"
+      ],
+      "prerequisites": [],
+      "parallel": true
+    }
+  ]
+}

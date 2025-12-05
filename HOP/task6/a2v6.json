@@ -1,1 +1,701 @@
-{"devices": ["TI-19", "VF-01", "CJ-42", "KL-39"], "tasks": [{"name": "GVB-041", "duration": 38, "devices": ["CJ-42"], "prerequisites": ["ILC-807", "BHV-179"], "parallel": true}, {"name": "ILC-807", "duration": 17, "devices": ["TI-19", "VF-01"], "prerequisites": [], "parallel": true}, {"name": "MNM-701", "duration": 38, "devices": ["CJ-42"], "prerequisites": ["VTK-388", "ZRQ-502", "XBR-985"], "parallel": true}, {"name": "CNI-970", "duration": 46, "devices": ["VF-01", "KL-39"], "prerequisites": ["UPF-945"], "parallel": true}, {"name": "VTK-388", "duration": 30, "devices": ["VF-01"], "prerequisites": ["RMY-046"], "parallel": true}, {"name": "CFG-522", "duration": 27, "devices": ["TI-19"], "prerequisites": [], "parallel": false}, {"name": "IHK-318", "duration": 34, "devices": ["TI-19", "VF-01"], "prerequisites": ["MMC-261", "IJA-391"], "parallel": true}, {"name": "PNK-764", "duration": 60, "devices": ["TI-19", "KL-39"], "prerequisites": ["XBR-985"], "parallel": true}, {"name": "OCJ-120", "duration": 35, "devices": ["TI-19"], "prerequisites": ["ZRQ-502"], "parallel": true}, {"name": "BOL-700", "duration": 22, "devices": ["TI-19", "KL-39"], "prerequisites": ["CFG-522"], "parallel": true}, {"name": "DCN-676", "duration": 27, "devices": ["KL-39"], "prerequisites": ["MSG-802"], "parallel": true}, {"name": "QXU-801", "duration": 47, "devices": ["CJ-42", "VF-01"], "prerequisites": ["MSG-802", "KAI-265"], "parallel": true}, {"name": "SLP-024", "duration": 36, "devices": ["TI-19", "KL-39"], "prerequisites": ["KAI-265"], "parallel": true}, {"name": "YSZ-345", "duration": 21, "devices": ["CJ-42", "VF-01"], "prerequisites": ["IJA-391"], "parallel": false}, {"name": "ZJN-503", "duration": 36, "devices": ["CJ-42"], "prerequisites": ["REY-567", "JIC-178"], "parallel": false}, {"name": "ZQB-854", "duration": 39, "devices": ["TI-19", "KL-39"], "prerequisites": ["OZJ-412", "HZM-622"], "parallel": true}, {"name": "RZO-964", "duration": 36, "devices": ["KL-39"], "prerequisites": ["YVR-396", "MSG-802"], "parallel": true}, {"name": "JIC-178", "duration": 39, "devices": ["VF-01", "CJ-42"], "prerequisites": ["KAI-265", "VUU-444"], "parallel": true}, {"name": "HNL-708", "duration": 34, "devices": ["CJ-42", "VF-01"], "prerequisites": ["VDH-634", "RMY-046", "ZRW-124"], "parallel": true}, {"name": "EAD-115", "duration": 57, "devices": ["TI-19", "CJ-42"], "prerequisites": ["MTU-295", "BFS-094", "CFG-522"], "parallel": true}, {"name": "ZNS-479", "duration": 60, "devices": ["CJ-42", "KL-39"], "prerequisites": ["BOL-700", "CFG-522", "MSK-612"], "parallel": true}, {"name": "HZM-622", "duration": 21, "devices": ["TI-19"], "prerequisites": [], "parallel": true}, {"name": "TYE-207", "duration": 53, "devices": ["CJ-42", "KL-39"], "prerequisites": ["JIC-178", "UPF-945"], "parallel": true}, {"name": "TPD-925", "duration": 22, "devices": ["CJ-42"], "prerequisites": [], "parallel": false}, {"name": "RMY-046", "duration": 27, "devices": ["KL-39", "TI-19"], "prerequisites": [], "parallel": true}, {"name": "MSV-606", "duration": 13, "devices": ["KL-39", "VF-01"], "prerequisites": [], "parallel": true}, {"name": "FHX-699", "duration": 57, "devices": ["VF-01", "KL-39"], "prerequisites": ["NWV-504"], "parallel": false}, {"name": "NZP-159", "duration": 35, "devices": ["TI-19", "KL-39"], "prerequisites": ["VUU-444", "TPD-925", "IJA-391"], "parallel": true}, {"name": "REY-567", "duration": 22, "devices": ["TI-19", "VF-01"], "prerequisites": ["VDH-634", "ZRQ-502"], "parallel": true}, {"name": "WGB-016", "duration": 27, "devices": ["TI-19", "VF-01"], "prerequisites": ["VUU-444", "KHD-776", "MMC-261"], "parallel": true}, {"name": "YVR-396", "duration": 17, "devices": ["KL-39"], "prerequisites": [], "parallel": false}, {"name": "LSL-169", "duration": 43, "devices": ["CJ-42", "KL-39"], "prerequisites": ["XBR-985"], "parallel": true}, {"name": "VXQ-798", "duration": 49, "devices": ["KL-39", "VF-01"], "prerequisites": ["MSV-606", "NWV-504"], "parallel": true}, {"name": "IJA-391", "duration": 14, "devices": ["CJ-42", "TI-19"], "prerequisites": [], "parallel": true}, {"name": "ZRQ-502", "duration": 14, "devices": ["TI-19"], "prerequisites": [], "parallel": true}, {"name": "MMC-261", "duration": 17, "devices": ["KL-39", "CJ-42"], "prerequisites": [], "parallel": true}, {"name": "QRP-514", "duration": 34, "devices": ["KL-39", "TI-19"], "prerequisites": ["UPF-945"], "parallel": false}, {"name": "BHV-179", "duration": 23, "devices": ["VF-01"], "prerequisites": [], "parallel": true}, {"name": "VUU-444", "duration": 29, "devices": ["CJ-42"], "prerequisites": [], "parallel": true}, {"name": "UXI-557", "duration": 22, "devices": ["CJ-42", "TI-19"], "prerequisites": [], "parallel": true}, {"name": "XBR-985", "duration": 25, "devices": ["TI-19", "CJ-42"], "prerequisites": ["YVR-396", "MMC-261", "UXI-557"], "parallel": false}, {"name": "HCT-320", "duration": 28, "devices": ["KL-39"], "prerequisites": ["UPF-945", "ZRW-124", "MMC-261"], "parallel": true}, {"name": "SRS-324", "duration": 38, "devices": ["VF-01"], "prerequisites": ["UPF-945", "RMY-046"], "parallel": true}, {"name": "YHM-942", "duration": 37, "devices": ["CJ-42"], "prerequisites": ["MSV-606"], "parallel": true}, {"name": "BVO-983", "duration": 40, "devices": ["CJ-42"], "prerequisites": ["JIC-178", "NZP-159", "MMC-261"], "parallel": false}, {"name": "OZJ-412", "duration": 28, "devices": ["VF-01"], "prerequisites": ["CFG-522", "KAI-265", "VUU-444"], "parallel": true}, {"name": "KAI-265", "duration": 12, "devices": ["VF-01"], "prerequisites": [], "parallel": true}, {"name": "UPF-945", "duration": 15, "devices": ["TI-19", "CJ-42"], "prerequisites": [], "parallel": true}, {"name": "JNK-865", "duration": 28, "devices": ["KL-39", "VF-01"], "prerequisites": ["ZRW-124", "MSG-802"], "parallel": true}, {"name": "KHD-776", "duration": 16, "devices": ["CJ-42", "TI-19"], "prerequisites": [], "parallel": true}, {"name": "MSG-802", "duration": 17, "devices": ["KL-39"], "prerequisites": [], "parallel": false}, {"name": "BFS-094", "duration": 24, "devices": ["KL-39"], "prerequisites": [], "parallel": false}, {"name": "BFO-485", "duration": 44, "devices": ["KL-39"], "prerequisites": ["NWV-504"], "parallel": false}, {"name": "NHA-489", "duration": 55, "devices": ["VF-01"], "prerequisites": ["VTK-388", "YSZ-345", "ZRW-124"], "parallel": true}, {"name": "VDH-634", "duration": 11, "devices": ["VF-01"], "prerequisites": [], "parallel": false}, {"name": "AQO-033", "duration": 47, "devices": ["VF-01", "TI-19"], "prerequisites": ["VDH-634", "OZJ-412", "REY-567"], "parallel": true}, {"name": "NWV-504", "duration": 32, "devices": ["VF-01"], "prerequisites": ["ILC-807", "HZM-622"], "parallel": false}, {"name": "ZRW-124", "duration": 19, "devices": ["VF-01"], "prerequisites": [], "parallel": true}, {"name": "MSK-612", "duration": 31, "devices": ["KL-39"], "prerequisites": ["ILC-807", "BHV-179"], "parallel": true}, {"name": "MTU-295", "duration": 21, "devices": ["VF-01", "KL-39"], "prerequisites": ["HZM-622", "VUU-444"], "parallel": true}]}
+{
+    "devices": [
+        "TI-19",
+        "VF-01",
+        "CJ-42",
+        "KL-39"
+    ],
+    "tasks": [
+        {
+            "name": "GVB-041",
+            "duration": 38,
+            "devices": [
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "ILC-807",
+                "BHV-179"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "ILC-807",
+            "duration": 17,
+            "devices": [
+                "TI-19",
+                "VF-01"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "MNM-701",
+            "duration": 38,
+            "devices": [
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "VTK-388",
+                "ZRQ-502",
+                "XBR-985"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "CNI-970",
+            "duration": 46,
+            "devices": [
+                "VF-01",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "UPF-945"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "VTK-388",
+            "duration": 30,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [
+                "RMY-046"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "CFG-522",
+            "duration": 27,
+            "devices": [
+                "TI-19"
+            ],
+            "prerequisites": [],
+            "parallel": false
+        },
+        {
+            "name": "IHK-318",
+            "duration": 34,
+            "devices": [
+                "TI-19",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "MMC-261",
+                "IJA-391"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "PNK-764",
+            "duration": 60,
+            "devices": [
+                "TI-19",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "XBR-985"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "OCJ-120",
+            "duration": 35,
+            "devices": [
+                "TI-19"
+            ],
+            "prerequisites": [
+                "ZRQ-502"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "BOL-700",
+            "duration": 22,
+            "devices": [
+                "TI-19",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "CFG-522"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "DCN-676",
+            "duration": 27,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [
+                "MSG-802"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "QXU-801",
+            "duration": 47,
+            "devices": [
+                "CJ-42",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "MSG-802",
+                "KAI-265"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "SLP-024",
+            "duration": 36,
+            "devices": [
+                "TI-19",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "KAI-265"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "YSZ-345",
+            "duration": 21,
+            "devices": [
+                "CJ-42",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "IJA-391"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "ZJN-503",
+            "duration": 36,
+            "devices": [
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "REY-567",
+                "JIC-178"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "ZQB-854",
+            "duration": 39,
+            "devices": [
+                "TI-19",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "OZJ-412",
+                "HZM-622"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "RZO-964",
+            "duration": 36,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [
+                "YVR-396",
+                "MSG-802"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "JIC-178",
+            "duration": 39,
+            "devices": [
+                "VF-01",
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "KAI-265",
+                "VUU-444"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "HNL-708",
+            "duration": 34,
+            "devices": [
+                "CJ-42",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "VDH-634",
+                "RMY-046",
+                "ZRW-124"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "EAD-115",
+            "duration": 57,
+            "devices": [
+                "TI-19",
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "MTU-295",
+                "BFS-094",
+                "CFG-522"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "ZNS-479",
+            "duration": 60,
+            "devices": [
+                "CJ-42",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "BOL-700",
+                "CFG-522",
+                "MSK-612"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "HZM-622",
+            "duration": 21,
+            "devices": [
+                "TI-19"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "TYE-207",
+            "duration": 53,
+            "devices": [
+                "CJ-42",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "JIC-178",
+                "UPF-945"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "TPD-925",
+            "duration": 22,
+            "devices": [
+                "CJ-42"
+            ],
+            "prerequisites": [],
+            "parallel": false
+        },
+        {
+            "name": "RMY-046",
+            "duration": 27,
+            "devices": [
+                "KL-39",
+                "TI-19"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "MSV-606",
+            "duration": 13,
+            "devices": [
+                "KL-39",
+                "VF-01"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "FHX-699",
+            "duration": 57,
+            "devices": [
+                "VF-01",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "NWV-504"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "NZP-159",
+            "duration": 35,
+            "devices": [
+                "TI-19",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "VUU-444",
+                "TPD-925",
+                "IJA-391"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "REY-567",
+            "duration": 22,
+            "devices": [
+                "TI-19",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "VDH-634",
+                "ZRQ-502"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "WGB-016",
+            "duration": 27,
+            "devices": [
+                "TI-19",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "VUU-444",
+                "KHD-776",
+                "MMC-261"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "YVR-396",
+            "duration": 17,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [],
+            "parallel": false
+        },
+        {
+            "name": "LSL-169",
+            "duration": 43,
+            "devices": [
+                "CJ-42",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "XBR-985"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "VXQ-798",
+            "duration": 49,
+            "devices": [
+                "KL-39",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "MSV-606",
+                "NWV-504"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "IJA-391",
+            "duration": 14,
+            "devices": [
+                "CJ-42",
+                "TI-19"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "ZRQ-502",
+            "duration": 14,
+            "devices": [
+                "TI-19"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "MMC-261",
+            "duration": 17,
+            "devices": [
+                "KL-39",
+                "CJ-42"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "QRP-514",
+            "duration": 34,
+            "devices": [
+                "KL-39",
+                "TI-19"
+            ],
+            "prerequisites": [
+                "UPF-945"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "BHV-179",
+            "duration": 23,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "VUU-444",
+            "duration": 29,
+            "devices": [
+                "CJ-42"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "UXI-557",
+            "duration": 22,
+            "devices": [
+                "CJ-42",
+                "TI-19"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "XBR-985",
+            "duration": 25,
+            "devices": [
+                "TI-19",
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "YVR-396",
+                "MMC-261",
+                "UXI-557"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "HCT-320",
+            "duration": 28,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [
+                "UPF-945",
+                "ZRW-124",
+                "MMC-261"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "SRS-324",
+            "duration": 38,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [
+                "UPF-945",
+                "RMY-046"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "YHM-942",
+            "duration": 37,
+            "devices": [
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "MSV-606"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "BVO-983",
+            "duration": 40,
+            "devices": [
+                "CJ-42"
+            ],
+            "prerequisites": [
+                "JIC-178",
+                "NZP-159",
+                "MMC-261"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "OZJ-412",
+            "duration": 28,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [
+                "CFG-522",
+                "KAI-265",
+                "VUU-444"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "KAI-265",
+            "duration": 12,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "UPF-945",
+            "duration": 15,
+            "devices": [
+                "TI-19",
+                "CJ-42"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "JNK-865",
+            "duration": 28,
+            "devices": [
+                "KL-39",
+                "VF-01"
+            ],
+            "prerequisites": [
+                "ZRW-124",
+                "MSG-802"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "KHD-776",
+            "duration": 16,
+            "devices": [
+                "CJ-42",
+                "TI-19"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "MSG-802",
+            "duration": 17,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [],
+            "parallel": false
+        },
+        {
+            "name": "BFS-094",
+            "duration": 24,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [],
+            "parallel": false
+        },
+        {
+            "name": "BFO-485",
+            "duration": 44,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [
+                "NWV-504"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "NHA-489",
+            "duration": 55,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [
+                "VTK-388",
+                "YSZ-345",
+                "ZRW-124"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "VDH-634",
+            "duration": 11,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [],
+            "parallel": false
+        },
+        {
+            "name": "AQO-033",
+            "duration": 47,
+            "devices": [
+                "VF-01",
+                "TI-19"
+            ],
+            "prerequisites": [
+                "VDH-634",
+                "OZJ-412",
+                "REY-567"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "NWV-504",
+            "duration": 32,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [
+                "ILC-807",
+                "HZM-622"
+            ],
+            "parallel": false
+        },
+        {
+            "name": "ZRW-124",
+            "duration": 19,
+            "devices": [
+                "VF-01"
+            ],
+            "prerequisites": [],
+            "parallel": true
+        },
+        {
+            "name": "MSK-612",
+            "duration": 31,
+            "devices": [
+                "KL-39"
+            ],
+            "prerequisites": [
+                "ILC-807",
+                "BHV-179"
+            ],
+            "parallel": true
+        },
+        {
+            "name": "MTU-295",
+            "duration": 21,
+            "devices": [
+                "VF-01",
+                "KL-39"
+            ],
+            "prerequisites": [
+                "HZM-622",
+                "VUU-444"
+            ],
+            "parallel": true
+        }
+    ]
+}
