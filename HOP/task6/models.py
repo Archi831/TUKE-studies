@@ -53,3 +53,14 @@ def load_data(filename):
         )
         all_tasks.append(task)
     return all_tasks, device_list
+
+def save_output(tasks, filename='output.csv'):
+    """Generates the CSV output."""
+    sorted_tasks = sorted(tasks, key=lambda x: x.start_time if x.start_time is not None else float('inf'))
+    
+    with open(filename, 'w') as f:
+        for t in sorted_tasks:
+            # Format: TaskName,DeviceName,StartTime
+            f.write(f"{t.name},{t.assigned_device},{t.start_time}\n")
+        f.write("\n") 
+    print(f"Schedule saved to {filename}")
