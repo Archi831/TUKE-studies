@@ -6,9 +6,10 @@ This project implements a task scheduling system using metaheuristic algorithms 
 
 The application schedules a set of tasks onto available devices. Each task has a specific duration, a list of allowed devices, a set of prerequisite tasks that must be completed before it can start, and a flag indicating if it can be run in parallel with other parallel tasks on the same device.
 
-The solution currently implements two algorithms:
+The solution currently implements three algorithms:
 1. **GRASP (Greedy Randomized Adaptive Search Procedure)**: Combines a randomized greedy construction phase with a local search improvement phase.
 2. **Simulated Annealing**: A probabilistic technique for approximating the global optimum of a given function.
+3. **Genetic Algorithm**: An evolutionary algorithm that uses selection, crossover, and mutation to evolve a population of schedules.
 
 ## Features
 
@@ -22,6 +23,7 @@ The solution currently implements two algorithms:
 
 - `GRASP.py`: Implements the GRASP metaheuristic (Construction and Local Search phases).
 - `simulatedAnnealing.py`: Implements the Simulated Annealing metaheuristic.
+- `GeneticAlgorithm.py`: Implements the Genetic Algorithm metaheuristic.
 - `scheduler.py`: Contains the `build_schedule` function which deterministically constructs a schedule from a given task order.
 - `models.py`: Defines the `Task` and `Device` classes and handles data loading.
 - `a2v6.json`: Input data file containing the list of devices and tasks.
@@ -45,6 +47,11 @@ python HOP/task6/GRASP.py
 python HOP/task6/simulatedAnnealing.py
 ```
 
+**Run Genetic Algorithm:**
+```bash
+python HOP/task6/GeneticAlgorithm.py
+```
+
 *Note: You may need to adjust the file paths in the scripts depending on your working directory.*
 
 ## Results
@@ -54,12 +61,13 @@ Example output from a run with 50 iterations:
 
 ```text
 Starting GRASP with 50 iterations...
-New Best found at iter 0: 318 mins
-New Best found at iter 1: 314 mins
-New Best found at iter 2: 299 mins
-New Best found at iter 5: 293 mins
-New Best found at iter 25: 281 mins
-Best Makespan: 281
+New Best found at iter 0: 263.0 mins
+New Best found at iter 1: 247.0 mins
+New Best found at iter 2: 246.0 mins
+New Best found at iter 6: 243.0 mins
+New Best found at iter 23: 238.0 mins
+New Best found at iter 34: 232.0 mins
+Best Makespan: 232.0
 ```
 
 ### Simulated Annealing
@@ -80,6 +88,19 @@ New Best found at iter 5779: 247 mins, with temp 15.5907
 New Best found at iter 8199: 237 mins, with temp 1.3847
 New Best found at iter 9717: 235 mins, with temp 0.3032
 Best Makespan: 235 mins
+```
+
+### Genetic Algorithm
+Example output from a run with population size 200 and 100 generations:
+
+```text
+Initial Best: 281.0
+Gen 0: New Best 259.0
+Gen 1: New Best 256.0
+Gen 3: New Best 250.0
+Gen 15: New Best 246.0
+Gen 23: New Best 232.0
+Best Makespan: 232.0
 ```
 
 ## Algorithm Details
@@ -106,16 +127,18 @@ A trajectory-based method inspired by thermodynamics.
 - **Cooling Schedule**: Uses a geometric cooling schedule (`temp *= cooling_rate`) to gradually reduce the probability of accepting worse solutions.
 - **Acceptance Probability**: Worse solutions are accepted with probability $P = e^{-\Delta / T}$, allowing the algorithm to escape local optima.
 
+### Genetic Algorithm
+A population-based evolutionary strategy.
+
+- **Representation**: Permutation of task indices.
+- **Selection**: Tournament Selection (k=3) to choose parents for the next generation.
+- **Crossover**: Ordered Crossover (OX) to combine parents while preserving relative task order and validity.
+- **Mutation**: Swap Mutation (swaps two random tasks) to introduce diversity.
+- **Elitism**: The best individual found so far is always preserved in the next generation.
+
 ## Roadmap
 
-The following optimization methods are planned for future implementation to improve solution quality and escape local optima:
-
-### Genetic Algorithms (GA) 
-A population-based evolutionary strategy
-
-**Strategy**: Maintains a pool of candidate schedules.
-
-**Operators**: Uses Crossover to combine partial schedules from two parents and Mutation to introduce random changes. This approach is particularly effective for large search spaces where decomposing the problem is beneficial
+Currently all initially planned algorithms have been implemented.
 
 ## Input Format (`a2v6.json`)
 
