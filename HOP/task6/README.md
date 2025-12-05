@@ -26,7 +26,9 @@ The solution currently implements three algorithms:
 - `GeneticAlgorithm.py`: Implements the Genetic Algorithm metaheuristic.
 - `scheduler.py`: Contains the `build_schedule` function which deterministically constructs a schedule from a given task order.
 - `models.py`: Defines the `Task` and `Device` classes and handles data loading.
-- `a2v6.json`: Input data file containing the list of devices and tasks.
+- `generate_dataset.py`: Script to generate synthetic problem instances (e.g., `large_dataset.json`).
+- `large_dataset.json`: A complex dataset with 100+ tasks used for benchmarking.
+- `a2v6.json`: Smaller input data file for testing.
 
 ## Installation
 
@@ -34,6 +36,12 @@ The solution currently implements three algorithms:
 2. No external dependencies are required beyond the standard library.
 
 ## Usage
+
+**Generate Dataset (Optional):**
+   If you want to create a fresh large dataset:
+   ```bash
+   python HOP/task6/generate_dataset.py
+   ```
 
 To run the optimization, execute the desired script from the root of the repository:
 
@@ -57,53 +65,50 @@ python HOP/task6/GeneticAlgorithm.py
 ## Results
 
 ### GRASP
-Example output from a run with 50 iterations:
+Example output from a run with 10 iterations:
 
 ```text
-Starting GRASP with 50 iterations...
-New Best found at iter 0: 263.0 mins
-New Best found at iter 1: 247.0 mins
-New Best found at iter 2: 246.0 mins
-New Best found at iter 6: 243.0 mins
-New Best found at iter 23: 238.0 mins
-New Best found at iter 34: 232.0 mins
-Best Makespan: 232.0
+Starting GRASP with 10 iterations...
+New Best found at iter 0: 717.0 mins
+New Best found at iter 1: 690.0 mins
+Best Makespan: 690.0
 ```
 
 ### Simulated Annealing
 Example output from a run with 10,000 iterations:
 
 ```text
-Starting Simulated Annealing with initial makespan: 2147483647 mins
-New Best found at iter 1620: 330 mins, with temp 1000.0000
-New Best found at iter 1627: 329 mins, with temp 993.0210
-New Best found at iter 1639: 313 mins, with temp 981.1700
-New Best found at iter 1684: 297 mins, with temp 937.9750
-New Best found at iter 1686: 286 mins, with temp 936.1000
-New Best found at iter 1691: 281 mins, with temp 931.4288
-New Best found at iter 1711: 264 mins, with temp 912.9761
-New Best found at iter 1729: 262 mins, with temp 896.6815
-New Best found at iter 3109: 261 mins, with temp 225.4301
-New Best found at iter 5779: 247 mins, with temp 15.5907
-New Best found at iter 8199: 237 mins, with temp 1.3847
-New Best found at iter 9717: 235 mins, with temp 0.3032
-Best Makespan: 235 mins
+Starting Simulated Annealing with initial makespan: 747.0 mins
+New Best found at iter 221: 736.0 mins, with temp 801.6280
+New Best found at iter 236: 709.0 mins, with temp 789.6874
+New Best found at iter 240: 707.0 mins, with temp 786.5334
+New Best found at iter 1662: 693.0 mins, with temp 189.6014
+Best Makespan: 693.0 mins
 ```
 
 ### Genetic Algorithm
-Example output from a run with population size 200 and 100 generations:
+Example output from a run with population size 200 and 5 generations:
 
 ```text
-Initial Best: 281.0
-Gen 0: New Best 259.0
-Gen 1: New Best 256.0
-Gen 3: New Best 250.0
-Gen 15: New Best 246.0
-Gen 23: New Best 232.0
-Best Makespan: 232.0
+Initial Best: 733.0
+Gen 0: New Best 700.0
+Gen 2: New Best 690.0
+Best Makespan: 690.0
 ```
 
 ## Algorithm Details
+
+### Topological Sort (Kahn's Algorithm)
+All algorithms rely on generating valid initial schedules where tasks are ordered such that no task appears before its prerequisites.
+- **Purpose**: Converts the dependency graph into a linear sequence of tasks.
+- **Process**:
+  1. Calculate the "in-degree" (number of prerequisites) for all tasks.
+  2. Add all tasks with an in-degree of 0 to a queue.
+  3. While the queue is not empty:
+     - Remove a task from the queue and add it to the sorted list.
+     - "Remove" this task from the graph by decrementing the in-degree of its neighbors.
+     - If a neighbor's in-degree becomes 0, add it to the queue.
+- **Randomization**: To support the metaheuristics, when multiple tasks are available in the queue (in-degree 0), one is chosen at random. This allows generating diverse but valid starting points.
 
 ### GRASP
 The solution employs the **GRASP** metaheuristic, which consists of two main phases repeated for a number of iterations:
@@ -123,6 +128,7 @@ The solution employs the **GRASP** metaheuristic, which consists of two main pha
 ### Simulated Annealing
 A trajectory-based method inspired by thermodynamics.
 
+- **Initialization**: Generates 100 random topological sorts and selects the best one as the starting point to overcome initialization bias.
 - **Strategy**: Starts with a valid schedule and iteratively makes small perturbations (swapping two random tasks).
 - **Cooling Schedule**: Uses a geometric cooling schedule (`temp *= cooling_rate`) to gradually reduce the probability of accepting worse solutions.
 - **Acceptance Probability**: Worse solutions are accepted with probability $P = e^{-\Delta / T}$, allowing the algorithm to escape local optima.
