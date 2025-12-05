@@ -101,7 +101,7 @@ def grasp(tasks: list[Task], devices: list[Device], max_iterations=100, alpha=0.
     return best_order, best_makespan
 
 if __name__ == "__main__":
-    tasks, device_names = load_data("HOP\\task6\\a2v6.json")
+    tasks, device_names = load_data("HOP\\task6\\large_dataset.json")
     devices = [Device(name) for name in device_names]
     best_order, best_makespan = grasp(tasks, devices, max_iterations=50, alpha=0.3)
     print("Best Makespan:", best_makespan)
