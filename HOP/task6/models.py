@@ -8,7 +8,7 @@ class Task:
         self.prerequisites = prerequisites
         self.parallel = parallel
 
-        self.start_time : int | None = None
+        self.start_time : float | None = None
         self.assigned_device = None
     
 class Device:

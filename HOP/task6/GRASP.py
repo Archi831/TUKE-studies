@@ -5,7 +5,6 @@ from scheduler import build_schedule
 Greedy Randomized Adaptive Search Procedure
 Chapter 2.8 of "Clever Algorithms"
 """
-# --- GRASP Construction ---
 def get_available_tasks(tasks, scheduled_names):
     """Identify tasks whose prerequisites are met."""
     candidates = []
@@ -49,7 +48,6 @@ def grasp_construction(tasks, alpha=0.3):
         
     return task_order_indices
 
-# --- GRASP Local Search ---
 def local_search(tasks, devices, current_order, current_makespan):
     """
     Tries to improve the schedule by swapping adjacent tasks in the priority list.
@@ -67,13 +65,12 @@ def local_search(tasks, devices, current_order, current_makespan):
             
     return improved_order, improved_makespan
 
-# --- Main GRASP Loop ---
 def run_grasp(tasks, devices, max_iterations=100, alpha=0.2):
     """
     Main GRASP optimization loop.
     """
     best_order = None
-    best_makespan = 2**31 - 1
+    best_makespan = float('inf')
     
     print(f"Starting GRASP with {max_iterations} iterations...")
     
@@ -81,7 +78,7 @@ def run_grasp(tasks, devices, max_iterations=100, alpha=0.2):
         candidate_order = grasp_construction(tasks, alpha)
         candidate_makespan = build_schedule(tasks, devices, candidate_order)
         
-        if candidate_makespan == 2**31 - 1:
+        if candidate_makespan == float('inf'):
             continue # Invalid schedule, skip
             
         # Local Search

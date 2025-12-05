@@ -10,7 +10,7 @@ def create_neighbor(current_order: list[int]) -> list[int]:
     neighbor_order[i], neighbor_order[j] = neighbor_order[j], neighbor_order[i]
     return neighbor_order
 
-def should_accept(delta: int, temperature: float) -> bool:
+def should_accept(delta: float, temperature: float) -> bool:
     """Decide whether to accept the new solution."""
     if delta < 0:
         return True
@@ -19,7 +19,7 @@ def should_accept(delta: int, temperature: float) -> bool:
         return random.uniform(0, 1) < acceptance_prob
     return False
 
-def simulated_annealing(tasks:list[Task], devices:list[Device], initial_temp=1000, cooling_rate=0.999, max_iterations=10_000) -> tuple[list[int], int]:
+def simulated_annealing(tasks:list[Task], devices:list[Device], initial_temp=1000, cooling_rate=0.999, max_iterations=10_000) -> tuple[list[int], float]:
     """
     Simulated Annealing algorithm to optimize task scheduling.
     """
@@ -38,7 +38,7 @@ def simulated_annealing(tasks:list[Task], devices:list[Device], initial_temp=100
         neighbor_order = create_neighbor(current_order)
         neighbor_makespan = build_schedule(tasks, devices, neighbor_order)
 
-        if neighbor_makespan == 2**31 - 1:
+        if neighbor_makespan == float('inf'):
             continue
 
         delta = neighbor_makespan - current_makespan
