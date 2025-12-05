@@ -65,9 +65,9 @@ def local_search(tasks: list[Task], devices: list[Device], current_order: list[i
             
     return improved_order, improved_makespan
 
-def run_grasp(tasks: list[Task], devices: list[Device], max_iterations=100, alpha=0.2) -> tuple[list[int], float]:
+def grasp(tasks: list[Task], devices: list[Device], max_iterations=100, alpha=0.2) -> tuple[list[int], float]:
     """
-    Main GRASP optimization loop.
+    GRASP algorithm to optimize task scheduling.
     """
     best_order = list(range(len(tasks)))
     best_makespan = float('inf')
@@ -103,5 +103,5 @@ def run_grasp(tasks: list[Task], devices: list[Device], max_iterations=100, alph
 if __name__ == "__main__":
     tasks, device_names = load_data("HOP\\task6\\a2v6.json")
     devices = [Device(name) for name in device_names]
-    best_order, best_makespan = run_grasp(tasks, devices, max_iterations=50, alpha=0.3)
+    best_order, best_makespan = grasp(tasks, devices, max_iterations=50, alpha=0.3)
     print("Best Makespan:", best_makespan)
