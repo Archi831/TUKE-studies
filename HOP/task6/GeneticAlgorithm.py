@@ -1,5 +1,5 @@
 import random
-from scheduler import build_schedule
+from scheduler import build_schedule, generate_random_topological_sort
 from models import Task, Device, load_data
 
 def order_crossover(parent1 : list[int], parent2: list[int]) -> list[int]:
@@ -36,11 +36,9 @@ def genetic_algorithm(tasks : list[Task], devices: list[Device], pop_size=100, g
     Genetic algorithm to optimize task scheduling.
     """
     population = []
-    base_order = list(range(len(tasks)))
     
     for _ in range(pop_size):
-        order = base_order[:]
-        random.shuffle(order)
+        order = generate_random_topological_sort(tasks)
         makespan = build_schedule(tasks, devices, order)
         population.append({'order': order, 'makespan': makespan})
 
@@ -48,6 +46,7 @@ def genetic_algorithm(tasks : list[Task], devices: list[Device], pop_size=100, g
     print(f"Initial Best: {global_best['makespan']}")
 
     for gen in range(generations):
+        print(f"Generation {gen}...")
         new_population = []
         
         # Keep the absolute best found so far
@@ -79,8 +78,8 @@ def genetic_algorithm(tasks : list[Task], devices: list[Device], pop_size=100, g
     return global_best['order'], global_best['makespan']
 
 if __name__ == "__main__":
-    tasks, device_names = load_data("HOP\\task6\\a2v6.json")
+    tasks, device_names = load_data("HOP\\task6\\large_dataset.json")
     devices = [Device(name) for name in device_names]
 
-    best_order, best_makespan = genetic_algorithm(tasks, devices, pop_size=200, generations=100, mutation_rate=0.2)
+    best_order, best_makespan = genetic_algorithm(tasks, devices, pop_size=200, generations=10, mutation_rate=0.2)
     print("Best Makespan:", best_makespan)
