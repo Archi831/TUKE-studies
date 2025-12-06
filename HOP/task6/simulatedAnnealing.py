@@ -1,6 +1,6 @@
 import math 
 import random
-from models import Task, Device, load_data
+from models import Task, Device, load_data, save_output
 from scheduler import build_schedule, generate_random_topological_sort
 
 def create_neighbor(current_order: list[int]) -> list[int]:
@@ -69,5 +69,6 @@ if __name__ == "__main__":
     devices = [Device(name) for name in device_names]
 
     best_order, best_makespan = simulated_annealing(tasks, devices)
-
+    build_schedule(tasks, devices, best_order)
+    save_output(tasks, filename="HOP\\task6\\simulated_annealing_output.csv")
     print(f"Best Makespan: {best_makespan} mins")

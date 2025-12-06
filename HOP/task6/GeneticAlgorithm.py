@@ -1,6 +1,6 @@
 import random
 from scheduler import build_schedule, generate_random_topological_sort
-from models import Task, Device, load_data
+from models import Task, Device, load_data, save_output
 
 def order_crossover(parent1 : list[int], parent2: list[int]) -> list[int]:
     """
@@ -83,3 +83,5 @@ if __name__ == "__main__":
 
     best_order, best_makespan = genetic_algorithm(tasks, devices, pop_size=200, generations=10, mutation_rate=0.2)
     print("Best Makespan:", best_makespan)
+    build_schedule(tasks, devices, best_order)
+    save_output(tasks, filename="HOP\\task6\\genetic_output.csv")

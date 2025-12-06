@@ -1,5 +1,5 @@
 import random
-from models import Task, Device, load_data
+from models import Task, Device, load_data, save_output
 from scheduler import build_schedule
 """
 Greedy Randomized Adaptive Search Procedure
@@ -104,4 +104,6 @@ if __name__ == "__main__":
     tasks, device_names = load_data("HOP\\task6\\large_dataset.json")
     devices = [Device(name) for name in device_names]
     best_order, best_makespan = grasp(tasks, devices, max_iterations=10, alpha=0.3)
+    build_schedule(tasks, devices, best_order)
+    save_output(tasks, filename="HOP\\task6\\grasp_output.csv")
     print("Best Makespan:", best_makespan)
