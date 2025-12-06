@@ -18,6 +18,7 @@ The solution currently implements three algorithms:
 - **Concurrency Control**: Supports both parallel and exclusive task execution modes on devices.
 - **Optimization**: Uses GRASP to minimize the total project duration (makespan).
 - **JSON Input**: Loads problem definitions (tasks and devices) from a structured JSON file.
+- **CSV Output**: Exports the final optimized schedule to a CSV file for detailed analysis.
 
 ## Project Structure
 
@@ -25,7 +26,7 @@ The solution currently implements three algorithms:
 - `simulatedAnnealing.py`: Implements the Simulated Annealing metaheuristic.
 - `GeneticAlgorithm.py`: Implements the Genetic Algorithm metaheuristic.
 - `scheduler.py`: Contains the `build_schedule` function which deterministically constructs a schedule from a given task order.
-- `models.py`: Defines the `Task` and `Device` classes and handles data loading.
+- `models.py`: Defines the `Task` and `Device` classes and handles data loading as well as saving output to CSV.
 - `generate_dataset.py`: Script to generate synthetic problem instances (e.g., `large_dataset.json`).
 - `large_dataset.json`: A complex dataset with 100+ tasks used for benchmarking.
 - `a2v6.json`: Smaller input data file for testing.
@@ -49,16 +50,19 @@ To run the optimization, execute the desired script from the root of the reposit
 ```bash
 python HOP/task6/GRASP.py
 ```
+Output: *grasp_output.csv*
 
 **Run Simulated Annealing:**
 ```bash
 python HOP/task6/simulatedAnnealing.py
 ```
+Output: *simulated_annealing_output.csv*
 
 **Run Genetic Algorithm:**
 ```bash
 python HOP/task6/GeneticAlgorithm.py
 ```
+Output: *genetic_output.csv*
 
 *Note: You may need to adjust the file paths in the scripts depending on your working directory.*
 
@@ -94,6 +98,19 @@ Initial Best: 733.0
 Gen 0: New Best 700.0
 Gen 2: New Best 690.0
 Best Makespan: 690.0
+```
+
+### CSV Output Example
+The output CSV file looks like this:
+
+```csv
+Task_2,Device_2,0.0
+Task_4,Device_6,0.0
+Task_5,Device_5,0.0
+Task_6,Device_9,0.0
+Task_10,Device_8,0.0
+Task_11,Device_2,0.0
+...
 ```
 
 ## Algorithm Details
