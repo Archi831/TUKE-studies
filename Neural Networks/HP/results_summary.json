@@ -1,0 +1,195 @@
+{
+    "baseline_logistic_regression": {
+        "val_accuracy": 0.9175,
+        "test_accuracy": 0.9243
+    },
+    "topologies": {
+        "T1 [64]": {
+            "mean_val_acc": 0.9705666666666667,
+            "std_val_acc": 0.00024944382578490196,
+            "mean_epochs": 24.666666666666668,
+            "wall_time": 380.00929403305054
+        },
+        "T2 [256,128]": {
+            "mean_val_acc": 0.9772333333333333,
+            "std_val_acc": 0.0014704496666741581,
+            "mean_epochs": 14.666666666666666,
+            "wall_time": 239.0142538547516
+        },
+        "T3 [512,256,128]": {
+            "mean_val_acc": 0.9778333333333333,
+            "std_val_acc": 0.0024073960113690134,
+            "mean_epochs": 18.0,
+            "wall_time": 312.6601700782776
+        },
+        "T4 [1024,512,256,128]": {
+            "mean_val_acc": 0.9809666666666667,
+            "std_val_acc": 0.0007039570693981077,
+            "mean_epochs": 22.0,
+            "wall_time": 365.2804973125458
+        },
+        "T5 [2048,1024,512,256,128]": {
+            "mean_val_acc": 0.9810333333333333,
+            "std_val_acc": 0.0015369522511197878,
+            "mean_epochs": 18.666666666666668,
+            "wall_time": 308.3226716518402
+        }
+    },
+    "optimizers": {
+        "Adam": {
+            "mean_val_acc": 0.9810333333333333,
+            "std_val_acc": 0.0015369522511197878,
+            "mean_epochs": 18.666666666666668,
+            "wall_time": 305.04955887794495
+        },
+        "SGD": {
+            "mean_val_acc": 0.968,
+            "std_val_acc": 0.0007874007874011462,
+            "mean_epochs": 48.333333333333336,
+            "wall_time": 773.4058163166046
+        },
+        "RMSprop": {
+            "mean_val_acc": 0.9811,
+            "std_val_acc": 0.001023067283548212,
+            "mean_epochs": 16.666666666666668,
+            "wall_time": 271.3246474266052
+        }
+    },
+    "learning_rates": {
+        "lr=0.0001": {
+            "mean_val_acc": 0.9779,
+            "std_val_acc": 0.0013140268896284614,
+            "mean_epochs": 18.333333333333332,
+            "wall_time": 300.157687664032
+        },
+        "lr=0.001": {
+            "mean_val_acc": 0.9811,
+            "std_val_acc": 0.001023067283548212,
+            "mean_epochs": 16.666666666666668,
+            "wall_time": 271.7922377586365
+        },
+        "lr=0.005": {
+            "mean_val_acc": 0.9762,
+            "std_val_acc": 0.0018239152027072483,
+            "mean_epochs": 18.333333333333332,
+            "wall_time": 302.37364077568054
+        },
+        "lr=0.01": {
+            "mean_val_acc": 0.6715666666666666,
+            "std_val_acc": 0.3953163908679842,
+            "mean_epochs": 11.666666666666666,
+            "wall_time": 208.82306838035583
+        },
+        "lr=0.1": {
+            "mean_val_acc": 0.1129,
+            "std_val_acc": 0.0,
+            "mean_epochs": 8.333333333333334,
+            "wall_time": 147.48071336746216
+        }
+    },
+    "activations": {
+        "relu": {
+            "mean_val_acc": 0.9811,
+            "std_val_acc": 0.001023067283548212,
+            "mean_epochs": 16.666666666666668,
+            "wall_time": 297.36888241767883
+        },
+        "leakyrelu": {
+            "mean_val_acc": 0.9804666666666666,
+            "std_val_acc": 0.0007133644853010615,
+            "mean_epochs": 14.333333333333334,
+            "wall_time": 255.96852564811707
+        },
+        "elu": {
+            "mean_val_acc": 0.9797333333333333,
+            "std_val_acc": 0.0016519348924484904,
+            "mean_epochs": 20.0,
+            "wall_time": 356.8693768978119
+        },
+        "tanh": {
+            "mean_val_acc": 0.9709,
+            "std_val_acc": 0.0032934277989150893,
+            "mean_epochs": 18.333333333333332,
+            "wall_time": 326.4312262535095
+        },
+        "sigmoid": {
+            "mean_val_acc": 0.9784,
+            "std_val_acc": 0.00029439202887761274,
+            "mean_epochs": 25.666666666666668,
+            "wall_time": 457.64427757263184
+        }
+    },
+    "regularization": {
+        "None": {
+            "mean_val_acc": 0.9811,
+            "std_val_acc": 0.001023067283548212,
+            "mean_train_acc": 0.9965133333333333,
+            "train_val_gap": 0.0154,
+            "mean_epochs": 16.666666666666668,
+            "wall_time": 297.3582603931427
+        },
+        "Dropout 0.3": {
+            "mean_val_acc": 0.9826333333333332,
+            "std_val_acc": 0.00033993463423951785,
+            "mean_train_acc": 0.99334,
+            "train_val_gap": 0.0107,
+            "mean_epochs": 27.666666666666668,
+            "wall_time": 506.15264415740967
+        },
+        "Dropout 0.5": {
+            "mean_val_acc": 0.9815666666666667,
+            "std_val_acc": 0.000984321537348923,
+            "mean_train_acc": 0.98574,
+            "train_val_gap": 0.0042,
+            "mean_epochs": 27.0,
+            "wall_time": 494.31393218040466
+        },
+        "L2 1e-4": {
+            "mean_val_acc": 0.9788666666666667,
+            "std_val_acc": 0.0003858612300930162,
+            "mean_train_acc": 0.99274,
+            "train_val_gap": 0.0139,
+            "mean_epochs": 16.333333333333332,
+            "wall_time": 293.3873839378357
+        },
+        "L2 1e-3": {
+            "mean_val_acc": 0.9733,
+            "std_val_acc": 0.0035814336049501826,
+            "mean_train_acc": 0.98402,
+            "train_val_gap": 0.0107,
+            "mean_epochs": 15.666666666666666,
+            "wall_time": 278.53309512138367
+        },
+        "Dropout0.3+L2 1e-4": {
+            "mean_val_acc": 0.9775666666666667,
+            "std_val_acc": 0.001096458946893218,
+            "mean_train_acc": 0.9827133333333334,
+            "train_val_gap": 0.0051,
+            "mean_epochs": 16.333333333333332,
+            "wall_time": 302.47961378097534
+        }
+    },
+    "final_model": {
+        "topology": "T5 [2048,1024,512,256,128]",
+        "topology_sizes": [
+            784,
+            2048,
+            1024,
+            512,
+            256,
+            128,
+            10
+        ],
+        "optimizer": "RMSprop",
+        "learning_rate": 0.001,
+        "activation": "relu",
+        "dropout": 0.3,
+        "weight_decay": 0.0,
+        "test_accuracy": 0.9863,
+        "seeds": [
+            42,
+            123,
+            456
+        ]
+    }
+}
